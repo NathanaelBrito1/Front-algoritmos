@@ -1,0 +1,111 @@
+/* Variáveis */
+:root {
+    --main-bg-color: rgb(9, 21, 21);
+    --header-bg-color: rgb(10, 20, 20);
+    --text-color: #ffffff;
+    --link-color: #ffffff;
+    --link-hover-color: #000000;
+    --footer-bg-color: rgb(10, 20, 20);
+    --footer-link-bg-hover: #ffffff;
+    --footer-link-color-hover:rgb(10, 20, 20);
+    --box-shadow: 0 10px 20px rgba(10, 75, 75, 0.4); /* Aumentei a sombra */
+    --main-box-shadow: 0 15px 30px  rgba(10, 75, 75, 0.4); /* Nova sombra para o main */
+}
+
+/* Reset CSS */
+body, h1, h2, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: var(--box-shadow);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: var(--box-shadow);
+}
+
+main {
+    flex: 1;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: var(--main-box-shadow);
+    max-width: 1000px; /* Largura máxima do main */
+    width: 80%; /* Largura desejada para o main (80% do viewport) */
+
+    /* Adicione a imagem de fundo com centralização e ajuste de opacidade */
+    background: url('./imagens/TESTE\ 1\ \(5\).png') center/cover no-repeat;
+}
+/* Ajuste das letras no main */
+main h1 {
+    font-size: 3em;
+    color: #fefefe83;
+    text-align: center; /* Centralizar o título */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--footer-bg-color);
+    padding: 20px 0;
+    box-shadow: var(--box-shadow);
+}
+
+footer a {
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+footer a img {
+    padding: 8px;
+    width: 60px;
+    height: 60px;
+}
+
+footer a:hover {
+    background-color: var(--footer-link-bg-hover);
+    color: var(--footer-link-color-hover);
+    transform: scale(1.1);
+}
+
